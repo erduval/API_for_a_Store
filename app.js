@@ -27,7 +27,7 @@ app.use('/', documentationRoute);
 app.use('/api', authRoute);
 app.use('/api', suggestionRoute);
 
-//Connection to mongoose
+//Connection to mongoos
 
 try {
     mongoose.connect(process.env.DB_CONNECTION, {
@@ -37,7 +37,7 @@ try {
         useCreateIndex: true
     }, () => console.log('Connected to DB'));
 } catch (error) {
-    console.log(`connection failed!! ${error}`)
+    console.log(`connection failed! ${error}`)
 }
 
 
